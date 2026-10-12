@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Електронна черга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page">
+    <h1>Електронна черга сервісного центру</h1>
+
+    <div class="card">
+        <div class="row">
+        <select id="service">
+            <option value="Ремонт">Ремонт</option>
+            <option value="Гарантія">Гарантія</option>
+            <option value="Консультація">Консультація</option>
+        </select>
+        <button id="takeBtn">Взяти талон</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Черга</h2>
+        <p id="count">У черзі: 0</p>
+        <ol id="queueList"></ol>
+    </div>
+
+    <div class="card">
+        <h2>Зараз обслуговується</h2>
+        <div id="serving">—</div>
+    </div>
+
+        <button id="callBtn">Викликати наступного</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
