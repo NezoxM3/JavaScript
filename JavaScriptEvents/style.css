@@ -1,0 +1,57 @@
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 560px;
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .screen {
+    text-align: center;
+    background: #ddd;
+    padding: 4px;
+    margin-bottom: 12px;
+  }
+
+  #hall { margin-bottom: 16px; }
+
+  .row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .row-label {
+    width: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .seat {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #555;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .seat.selected {
+    background: #4caf50;
+    color: #fff;
+  }
+
+  .seat[data-state="taken"] {
+    background: #999;
+    color: #666;
+    cursor: not-allowed;
+  }
+
+  .panel {
+    border: 1px solid #ccc;
+    padding: 12px;
+  }
+
+  #message { color: red; }
+  #info { color: #1565c0; }
