@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Номерний знак</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Номерний знак</h1>
+
+        <label for="plate">Номерний знак</label>
+        <div class="row">
+            <input id="plate" type="text" maxlength="8" autocomplete="off" spellcheck="false"
+                aria-describedby="msg" placeholder="ВІ1234АН">
+            <button id="save" type="button" disabled>Зберегти номер</button>
+        </div>
+        <p id="msg" aria-live="polite"></p>
+
+        <h2>Збережені номери</h2>
+        <table>
+            <thead><tr><th>№</th><th>Номерний знак</th><th>Збережено</th></tr></thead>
+            <tbody id="rows"></tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

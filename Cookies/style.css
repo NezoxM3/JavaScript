@@ -1,0 +1,59 @@
+  :root {
+    --bg: #f3f4f1;
+    --ink: #1d2320;
+    --muted: #6b736e;
+    --line: #c9cfca;
+    --ok: #2e8b57;
+    --bad: #c8372d;
+    --accent: #1f3d63;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 16px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 480px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 24px; }
+  label { display: block; font-weight: 600; margin-bottom: 6px; }
+  .row { display: flex; gap: 8px; }
+  #plate {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    font: 600 1.4rem/1.2 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    border: 2px solid var(--line);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--ink);
+    outline: none;
+  }
+  #plate:focus-visible { box-shadow: 0 0 0 3px rgba(31,61,99,.25); }
+  #plate.valid   { border-color: var(--ok); }
+  #plate.invalid { border-color: var(--bad); }
+  button {
+    padding: 0 18px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:disabled { background: var(--line); color: var(--muted); cursor: not-allowed; }
+  button:focus-visible { outline: 3px solid rgba(31,61,99,.4); outline-offset: 2px; }
+  #msg { min-height: 1.5em; margin: 6px 0 0; font-size: .9rem; }
+  #msg.valid { color: var(--ok); }
+  #msg.invalid { color: var(--bad); }
+  h2 { font-size: 1.1rem; margin: 32px 0 8px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--line); }
+  th { font-size: .85rem; color: var(--muted); font-weight: 600; }
+  td.num { font: 600 1rem ui-monospace, Menlo, Consolas, monospace; letter-spacing: .08em; }
+  tr:last-child td { border-bottom: 0; }
+  .empty { color: var(--muted); }
