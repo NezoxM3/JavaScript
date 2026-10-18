@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Диспетчер доставок</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Диспетчер доставок</h1>
+
+  <div id="notice" role="alert" hidden></div>
+
+  <section class="panel">
+    <h2>Нове замовлення</h2>
+    <form id="order-form" novalidate>
+      <div class="field">
+        <label for="f-number">Номер замовлення</label>
+        <input id="f-number" type="text" autocomplete="off" placeholder="DL-1024">
+        <div class="error" id="e-number" aria-live="polite"></div>
+      </div>
+      <div class="field">
+        <label for="f-weight">Вага, кг</label>
+        <input id="f-weight" type="text" inputmode="decimal" autocomplete="off" placeholder="2.5">
+        <div class="error" id="e-weight" aria-live="polite"></div>
+      </div>
+      <div class="field wide">
+        <label for="f-address">Адреса доставки</label>
+        <input id="f-address" type="text" autocomplete="off" placeholder="Київ, вул. Хрещатик, 1">
+        <div class="error" id="e-address" aria-live="polite"></div>
+      </div>
+      <div class="field">
+        <label for="f-time">Бажаний час доставки</label>
+        <input id="f-time" type="datetime-local">
+        <div class="error" id="e-time" aria-live="polite"></div>
+      </div>
+      <div class="field">
+        <label for="f-tags">Теги</label>
+        <input id="f-tags" type="text" autocomplete="off" placeholder="крихке, терміново, холодильник">
+        <div class="hint">Через кому. Повтори будуть прибрані.</div>
+      </div>
+      <div class="actions"><button type="submit">Додати замовлення</button></div>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="toolbar">
+      <label class="toggle"><input type="checkbox" id="only-overdue"> Показувати лише прострочені</label>
+      <div id="counter" aria-live="polite"></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Номер</th><th>Адреса</th><th>Вага</th><th>Час доставки</th>
+            <th>Теги</th><th>Статус</th><th>Дії</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="javascript.js"></script>
+</body>
+</html>
