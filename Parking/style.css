@@ -1,0 +1,13 @@
+  body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 20px; }
+  h1 { margin-top: 0; }
+  .gate { background: white; border: 1px solid #bbb; border-radius: 8px;
+          padding: 12px; margin-bottom: 15px; }
+  .gate h2 { font-size: 18px; margin: 0 0 8px; }
+  button { font-size: 15px; padding: 6px 14px; cursor: pointer; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+  th { background: #eee; }
+  .ok { background: #e3f4e6; }
+  .pay { background: #fff3d6; }
+  .manual { background: #e6e8fa; }
+  .err { background: #fde7e9; color: #b00020; }
