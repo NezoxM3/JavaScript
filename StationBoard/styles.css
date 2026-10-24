@@ -1,0 +1,7 @@
+  body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 20px; }
+  h1 { margin-top: 0; }
+  #status { font-size: 18px; color: #666; }
+  #status.error { color: #b00020; background: #fde7e9; padding: 10px; border-radius: 6px; }
+  table { width: 100%; border-collapse: collapse; background: white; }
+  th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #eee; }

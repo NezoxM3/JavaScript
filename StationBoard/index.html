@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Табло автовокзалу</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Інформаційне табло автовокзалу</h1>
+
+    <div class="top">
+        <div class="tabs">
+            <button class="tab" data-tab="departures">Відправлення<span class="tab-time"></span></button>
+            <button class="tab" data-tab="arrivals">Прибуття<span class="tab-time"></span></button>
+            <button class="tab" data-tab="announcements">Оголошення<span class="tab-time"></span></button>
+        </div>
+        <button id="refreshBtn" disabled>Оновити</button>
+    </div>
+
+    <div id="content"><p class="hint">Оберіть вкладку.</p></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
