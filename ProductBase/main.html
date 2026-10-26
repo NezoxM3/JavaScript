@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Редактор товарів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top">
+    <h1>Редактор товарів</h1>
+    <button id="addBtn" class="btn primary">Додати товар</button>
+    </header>
+
+    <div id="errorBanner" class="banner" hidden></div>
+
+    <section class="toolbar">
+        <input id="searchInput" type="search" placeholder="Пошук за назвою" autocomplete="off">
+        <select id="categoryFilter"></select>
+        <input id="priceFrom" type="number" min="0" step="0.01" placeholder="Ціна від">
+        <input id="priceTo" type="number" min="0" step="0.01" placeholder="Ціна до">
+        <select id="sortSelect">
+            <option value="date">Спочатку нові</option>
+            <option value="name">За назвою</option>
+            <option value="price-asc">Ціна: за зростанням</option>
+            <option value="price-desc">Ціна: за спаданням</option>
+        </select>
+    </section>
+
+    <p id="counter" class="counter"></p>
+
+    <main id="list" class="grid"></main>
+
+    <div id="productModal" class="overlay" hidden>
+        <form id="productForm" class="modal" novalidate>
+            <h2 id="modalTitle">Додати товар</h2>
+            <p id="formError" class="form-error" hidden></p>
+
+            <div class="field">
+                <label for="nameInput">Назва</label>
+                <input id="nameInput" type="text" autocomplete="off">
+                <div class="error-text" id="nameError"></div>
+            </div>
+
+            <div class="row">
+            <div class="field">
+                <label for="priceInput">Ціна, грн</label>
+                <input id="priceInput" type="text" inputmode="decimal" autocomplete="off" placeholder="1250.00">
+                <div class="error-text" id="priceError"></div>
+            </div>
+            <div class="field">
+                <label for="quantityInput">Кількість</label>
+                <input id="quantityInput" type="text" inputmode="numeric" autocomplete="off">
+                <div class="error-text" id="quantityError"></div>
+            </div>
+            </div>
+
+            <div class="field">
+                <label for="categoryInput">Категорія</label>
+                <select id="categoryInput"></select>
+                <div class="error-text" id="categoryError"></div>
+            </div>
+
+            <div class="field">
+                <label for="descriptionInput">Опис</label>
+                <textarea id="descriptionInput" rows="3"></textarea>
+                <div class="error-text" id="descriptionError"></div>
+            </div>
+
+            <div class="field">
+                <label for="imageInput">Зображення</label>
+                <input id="imageInput" type="file" accept="image/*">
+                <div id="preview" class="preview"></div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="cancelBtn" class="btn">Скасувати</button>
+                <button type="submit" id="saveBtn" class="btn primary" disabled>Зберегти</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="confirmModal" class="overlay" hidden>
+        <div class="modal small">
+            <p id="confirmText"></p>
+            <div class="buttons">
+            <button type="button" id="confirmCancel" class="btn">Скасувати</button>
+            <button type="button" id="confirmDelete" class="btn danger">Видалити</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
